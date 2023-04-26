@@ -1,0 +1,106 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+  --color-light: white;
+  --color-signal: #fab700;
+
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+
+  line-height: 1.4;
+
+  font-family: 'Inter', sans-serif;
+  font-size: calc(.6rem + .4vw);
+  color: black;
+  background: var(--color-background);
+  font-weight: 300;
+  padding: 0 calc(var(--size-bezel) * 3);
+}
+
+.card {
+  background: var(--color-background);
+  width: 80%;
+  height: 80%;
+
+}
+
+
+.l-design-widht {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  position: relative;
+
+  margin-bottom: 40px;
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: blue;
+    padding-top: 10px;
+    padding-left: 5px;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: var(--color-background);
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 20px;
+  }
+  &__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 3px solid blue;
+    padding-top: 10px;
+    color: black;
+    font-size: 18px;
+    background: transparent;
+    border-radius: var(--size-radius);
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(.25rem, -75%) scale(.8);
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+
+.button-group {
+  margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+button {
+  color: black;
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--size-radius);
+  font-weight: 900;
+  font-size: 20px;
+
+  &[type=reset]{
+    background: var(--color-background);
+    font-weight: 200;
+  }
+}
+
+button + button {
+  margin-left: 50px;
+}
+
+

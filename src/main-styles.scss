@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+
+$purple: #A59AD7;
+$pink: #FE76C2;
+$blue: #37C7F2;
+$green: #0BF387;
+
+$light-red: #FFF3F3;
+$light: #FAFCFF;
+
+
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $purple;
+$link: $blue;
+
+
+$body-background-color: $light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color: #F3F5FA;
+$input-shadow: none;
+
+
+
+html, body {
+  height: 100%;
+  font-size: 18px !important;
+  overflow: hidden !important;
+}

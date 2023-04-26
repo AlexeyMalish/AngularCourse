@@ -1,0 +1,23 @@
+<div class="l-design-widht">
+  <div class="card">
+    <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)">
+      <div class="input">
+        <input class="input__field" type="text" placeholder=" "/>
+        <span class="input__label" [ngModel]="note.title">Title</span>
+      </div>
+
+      <div class="input">
+        <input class="input__field" type="text" placeholder=" "/>
+        <span class="input__label" [ngModel]="note.body">Body</span>
+      </div>
+
+      <div class="button-group">
+        <button [disabled]="!noteForm.valid">Send</button>
+        <button type="reset" (click)="onCancel()">Reset</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+
